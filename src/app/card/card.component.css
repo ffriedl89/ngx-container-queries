@@ -1,0 +1,96 @@
+:host {
+  background: #fff;
+  border: 1px solid hsla(0, 0%, 0%, 0.1);
+  border-radius: 4px;
+  display: flex;
+  flex-flow: column;
+  min-width: 0;
+  overflow: hidden;
+  padding: 1em;
+  position: relative;
+  transition: flex-grow 0.5s;
+}
+
+figure {
+  width: 100%;
+  min-width: 0;
+  margin: 0 0 1em 0;
+}
+
+.card-body :last-child {
+  margin-bottom: 0;
+}
+
+header {
+  font-weight: 600;
+  font-size: 1.4em;
+  margin-bottom: calc(.75em / 1.4);
+}
+
+.icon {
+  contain: strict;
+  display: inherit;
+  fill: currentColor;
+  height: 1.5em;
+  min-width: 1.5em;
+  width: 1.5em;
+}
+
+.icon--inline {
+  margin-right: 0.667em;
+}
+
+.icon--inline:last-child {
+  margin-right: 0;
+  margin-left: 0.667em;
+}
+
+.icon-actions {
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 0.8em;
+}
+
+.icon-actions > .icon {
+  color: #aaa;
+}
+
+.icon-actions > .icon:hover {
+  color: #444;
+}
+
+.image {
+  border: 1px solid hsl(0, 0%, 90%);
+  padding: .25em;
+}
+
+.image::after {
+  background: hsl(0, 0%, 90%);
+  content: '';
+  display: block;
+  height: 0;
+  padding-top: calc(100% * 9 / 16);
+  width: 100%;
+}
+
+/* -------------- */
+/* Breakpoint: SM */
+/* -------------- */
+
+.sm > :host {
+  flex-flow: row;
+}
+
+.sm > :host > .card-figure {
+  border-right: 1px solid #eee;
+  flex: 2;
+  margin-right: 1em;
+  margin-bottom: 0;
+  min-width: 0;
+  padding-right: 1em;
+}
+
+.sm > :host > .card-body {
+  min-width: 0;
+  flex: 5;
+}
